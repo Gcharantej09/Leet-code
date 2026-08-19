@@ -10,11 +10,10 @@ class Solution {
                 l++;
             }
             if(i-l+1==k){
-                if(r/k>=threshold){
+                if(r>=k*threshold){
                     c++;
                 }
-            }
-            
+            }  
         }
         return c;
     }
