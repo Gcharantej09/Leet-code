@@ -10,7 +10,6 @@ class Solution {
                 l++;
             }
             if(i-l+1==k){
-                
                 if(r/k>=threshold){
                     c++;
                 }
