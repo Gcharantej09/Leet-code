@@ -17,14 +17,14 @@ class Solution {
                 k++;
             }
         }
-        int n=0;
+       
         for(int i=0;i<=j;i++){
-            nums1[n ]=arr1[i];
-            n++;
+            nums1[i]=arr1[i];
+        
         }
          for(int i=0;i<=k;i++){
-            nums1[n]=arr2[i];
-            n++;
+            nums1[j+i+1]=arr2[i];
+
         }
         return nums1;
     }
