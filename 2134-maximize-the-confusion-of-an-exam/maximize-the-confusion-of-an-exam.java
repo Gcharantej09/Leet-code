@@ -14,19 +14,18 @@ class Solution {
             }
             ans=Math.max(ans, i-l+1);
         }
-        int t=0;
-        int s=0;
+        l=0;c=0;
          for( int i=0;i<answerKey.length();i++){
             if(answerKey.charAt(i)=='T'){
-                t++;
+                c++;
             }
-            while(t>k){
-            if(answerKey.charAt(s)=='T'){
-                t--;
+            while(c>k){
+            if(answerKey.charAt(l)=='T'){
+                c--;
             }
-                s++;
+                l++;
             }
-            ans=Math.max(ans, i-s+1);
+            ans=Math.max(ans, i-l+1);
         }
         return ans;
     }
