@@ -1,8 +1,8 @@
 class Solution {
     public int subarraysWithKDistinct(int[] nums, int k) {
-        return mass(nums,k)-mass(nums,k-1);
+        return atmostk(nums,k)-atmostk(nums,k-1);
     }
-    public int mass(int []nums,int k){
+    public int atmostk(int []nums,int k){
         HashMap<Integer,Integer>map=new HashMap<>();
         int l=0;int temp=0;int ans=0;
         for(int i=0;i<nums.length;i++){
