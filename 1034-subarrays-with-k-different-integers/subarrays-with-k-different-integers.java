@@ -1,25 +1,39 @@
 class Solution {
+
     public int subarraysWithKDistinct(int[] nums, int k) {
-        return atmostk(nums,k)-atmostk(nums,k-1);
+        return atMost(nums, k) - atMost(nums, k - 1);
     }
-    public int atmostk(int []nums,int k){
-        HashMap<Integer,Integer>map=new HashMap<>();
-        int l=0;int temp=0;int ans=0;
-        for(int i=0;i<nums.length;i++){
-            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
-            if(map.get(nums[i])==1){
-                temp++;
+
+    private int atMost(int[] nums, int k) {
+
+        int[] freq = new int[nums.length + 1];
+
+        int l = 0;
+        int distinct = 0;
+        int ans = 0;
+
+        for (int r = 0; r < nums.length; r++) {
+
+            if (freq[nums[r]] == 0) {
+                distinct++;
             }
-            while(temp>k){
-                map.put(nums[l],map.get(nums[l])-1);
-                
-                if(map.get(nums[l])==0){
-                map.remove(nums[l]);
-                temp--;
+
+            freq[nums[r]]++;
+
+            while (distinct > k) {
+
+                freq[nums[l]]--;
+
+                if (freq[nums[l]] == 0) {
+                    distinct--;
                 }
+
                 l++;
             }
-            ans+=i-l+1;
-        }return ans;
+
+            ans += r - l + 1;
+        }
+
+        return ans;
     }
 }
