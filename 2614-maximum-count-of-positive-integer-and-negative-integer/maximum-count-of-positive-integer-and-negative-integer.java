@@ -1,29 +1,23 @@
 class Solution {
     public int maximumCount(int[] nums) {
-        int l=0;int h=nums.length-1;int ans=0;
+        int neg=fun(nums,0);
+        int one=fun(nums,1);
+        int pso=nums.length-one;
+        int ans=Math.max(neg,pso);
+        return ans;
+     }
+     public static int fun(int []nums,int k){ 
+        int l=0;int h=nums.length-1;
         while( l<=h){
             int mid=l+(h-l)/2;
-            if(nums[mid]>=0){
+            if(nums[mid]>=k){
                  h=mid-1; 
             }
             else{
               l=mid+1;
             }
             
-        }
-        int temp=h+1;
-         l=0;h=nums.length-1;
-        while( l<=h){
-            int mid=l+(h-l)/2;
-            if(nums[mid]>0){
-                h=mid-1;
-            }
-            else{
-                l=mid+1;
-            }
-        }
-            int temp1=nums.length-l;
-            ans=Math.max(temp,temp1);
-            return ans;
-    }
+        }return l;
+     }
+
 }
