@@ -7,11 +7,13 @@ class Solution {
         }
         while(l<=h){
             int mid=l+(h-l)/2;
+            int temp=0;
             int sum=0;
             for(int i=0;i<nums.length;i++){
-                sum+=(int)Math.ceil((double)nums[i]/mid);
+                sum=(nums[i]+mid-1)/mid;
+                temp+=sum;
             }
-            if(sum<=threshold){
+            if(temp<=threshold){
                 
                 h=mid-1;
             }
