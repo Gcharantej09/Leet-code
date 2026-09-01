@@ -6,6 +6,7 @@ class Solution {
          if(i>0&&nums[i]==nums[i-1]){
             continue;
          }
+         if(nums[i]>0)break;
          int l=i+1;
          int r=nums.length-1;
          while(l<r){
