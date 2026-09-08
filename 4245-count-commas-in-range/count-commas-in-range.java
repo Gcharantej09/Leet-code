@@ -4,11 +4,11 @@ class Solution {
         if(n<1000){
             return 0;
         }
-         if(n>999){
-        for( int i=999;i<n;i++){
-            c++;
-        }}
-           
+        for( int i=1000;i<=n;i++){
+            if(n>999){
+                 c++;
+            }
+        }
         return c;
     }
 }
