@@ -12,7 +12,7 @@ class Solution {
 
         }
         List<Integer>list=new ArrayList<>();
-        for(int i=l;i<h+k;i++){
+        for(int i=l;i<l+k;i++){
             list.add(nums[i]);
         }
         return list;
