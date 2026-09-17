@@ -2,8 +2,8 @@ class Solution {
     public boolean findSubarrays(int[] nums) {
         int sum[]=new int[nums.length-1];
         int j=0;
-        for(int i=0;i<=nums.length-2;i++ ){
-             sum[j]=nums[i]+nums[i+1];
+        for(int i=1;i<nums.length;i++ ){
+             sum[j]=nums[i-1]+nums[i];
                 j++;
         }
         for( int i=0;i<sum.length;i++){
