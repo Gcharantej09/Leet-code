@@ -3,10 +3,12 @@ class Solution {
         int x=0;
         int y=n;
         int arr[]= new int [2*n];
-        int i=0;
-        while(x<n){
-            arr[i++]=nums[x++];
-            arr[i++]=nums[y++];
+        int j=0;
+        for(int i=0;i<nums.length-n;i++){
+            arr[j++]=nums[x];
+            arr[j++]=nums[y];
+            x++;y++;
+           
         }
         return arr;
     }
