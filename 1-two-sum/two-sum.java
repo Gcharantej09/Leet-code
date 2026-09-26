@@ -3,17 +3,13 @@ import java.util.*;class Solution {
       
     HashMap<Integer,Integer>s=new HashMap<>();
     for(int i=0;i<nums.length;i++){
-        if(!s.containsKey(i)){
+        if(!s.containsKey(nums[i])){
         s.put(nums[i],i);}
-        
-            
-        }for(int i=0;i<nums.length;i++){
-            int a=target-nums[i];
+        int a=target-nums[i];
         if(s.containsKey(a)&& s.get(a)!=i){
             return new int[]{s.get(a),i};
+        }      
         }
-       
-    }
     return new int[]{};
     }
 }
