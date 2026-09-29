@@ -4,9 +4,10 @@ class Solution {
        
         for(int i=0;i<nums.length;i++){
             
+            int n=nums[i];
              int c=0;
-            while(nums[i]>0){
-                nums[i]=nums[i]/10;
+            while(n>0){
+                n=n/10;
                 c++;
             }
             if(c%2==0){
