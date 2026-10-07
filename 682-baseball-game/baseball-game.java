@@ -27,9 +27,9 @@ class Solution {
             }
         }
         int ans=0;
-        for(int i=0;i<s.size();i++){
+        for(int i:s){
            
-             ans+=s.get(i);}
+             ans+=i;}
         
         return ans;
     }
