@@ -6,11 +6,12 @@ class Solution {
             char c=s.charAt(i);
             if(c=='('){
                 s1.push(c);
+                ans=Math.max(ans,s1.size());
             }
             else if(c==')'){
                 s1.pop();
             }
-            ans=Math.max(ans,s1.size());
+            
         }
         return ans;
     }
