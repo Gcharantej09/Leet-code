@@ -5,7 +5,7 @@ class Solution {
         for(int i=0;i<s.length();i++){
             char c=s.charAt(i);
             if(c=='('){
-                s1.push(c);
+                s1.push('(');
                 ans=Math.max(ans,s1.size());
             }
             else if(c==')'){
