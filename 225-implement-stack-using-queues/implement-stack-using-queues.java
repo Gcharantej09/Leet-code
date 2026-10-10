@@ -1,4 +1,4 @@
-import java.util.*;class MyStack {
+class MyStack {
     Queue<Integer>q;
     public MyStack() {
         q=new LinkedList<>();
