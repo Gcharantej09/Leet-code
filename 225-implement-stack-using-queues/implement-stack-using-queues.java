@@ -1,4 +1,4 @@
-class MyStack {
+import java.util.*;class MyStack {
     Queue<Integer>q;
     public MyStack() {
         q=new LinkedList<>();
@@ -7,8 +7,8 @@ class MyStack {
     public void push(int x) {
         q.add(x);
         for( int i=0;i<q.size()-1;i++){
-           int t= q.poll();
-           q.add(t);
+           int temp= q.poll();
+           q.add(temp);
         }
     }
     
