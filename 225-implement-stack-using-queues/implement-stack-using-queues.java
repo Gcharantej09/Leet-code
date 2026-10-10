@@ -22,10 +22,8 @@ class MyStack {
     }
     
     public boolean empty() {
-        if(q.isEmpty()){
-            return true ;
-        }
-        return false;
+        
+        return q.isEmpty();
     }
 }
 
