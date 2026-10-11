@@ -10,10 +10,10 @@ class Solution {
              s1.push(c);
             }
         }
-        String s2="";
+        StringBuilder s2=new StringBuilder();
         for(int i=0;i<s1.size();i++){
-            s2+=s1.get(i);
+            s2.append(s1.get(i));
         }
-        return s2;
+        return s2.toString();
     }
 }
