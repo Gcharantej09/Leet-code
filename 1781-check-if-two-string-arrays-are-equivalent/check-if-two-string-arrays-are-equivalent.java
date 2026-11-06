@@ -1,24 +1,16 @@
 class Solution {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-        List<Character>s=new ArrayList<>();
-        List<Character>s1=new ArrayList<>();
-        int row=word1.length;
-        
-        for( int i=0;i<row;i++){
-            for(int j=0;j<word1[i].length();j++){
-                s.add(word1[i].charAt(j));
-            }
+        StringBuilder s1=new StringBuilder();
+        StringBuilder s2=new StringBuilder();
+        for( int i=0;i<word1.length;i++){
+            s1.append(word1[i]);
         }
-        int row1=word2.length;
-  
-         for( int i=0;i<row1;i++){
-            for(int j=0;j<word2[i].length();j++){
-                s1.add(word2[i].charAt(j));
-            }
+        for( int i=0;i<word2.length;i++){
+            s2.append(word2[i]);
         }
-        if(s.size()!=s1.size()){
+        if(s1.length()!=s2.length()){
             return false;
         }
-        return s.equals(s1);
+        return s1.toString().equals(s2.toString());
     }
 }
