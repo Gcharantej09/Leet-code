@@ -1,23 +1,20 @@
 import java.util.Arrays;;
 class Solution {
     public int majorityElement(int[] nums) {
-        int n=0;
-        int j=0;
+        HashMap<Integer,Integer>map=new HashMap();
         for(int i=0;i<nums.length;i++){
-           
-            if(j==0){
-                n=nums[i];
-            }
-                if(nums[i]==n){
-                    j++;
-                }
-                else{
-               j--;
-            }
             
-
+                map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+            
+            
         }
-       
-        return n;
+        for(int i:map.keySet()){
+            if(map.get(i)>nums.length/2){
+                return i;
+
+                
+            }
+        }
+        return -1;
     }
 }
