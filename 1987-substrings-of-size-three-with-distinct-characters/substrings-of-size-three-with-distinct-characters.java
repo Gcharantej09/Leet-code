@@ -1,25 +1,18 @@
 class Solution {
     public int countGoodSubstrings(String s) {
-        HashSet<Character>set=new HashSet<>();
-        int l=0;int ans=0;
-        for(int i=0;i<s.length();i++){
-            while(set.contains(s.charAt(i))){
-                set.remove(s.charAt(l));
-                l++;
+        int l=0;
+        int d=0;
+        int k=3;
+        for( int i=0;i<s.length()-k+1;i++){
+            char c=s.charAt(l);
+            char b=s.charAt(l+1);
+            char a=s.charAt(l+2);
+            if(a!=b&&b!=c&&c!=a){
+                d++;
             }
-            
-                set.add(s.charAt(i));
-                if(i-l+1>3){
-                    set.remove(s.charAt(l));
-                    l++; 
-                }
-                if(i-l+1==3){
-                    ans++;
-                }
-            
-            
-            
+            l++;
         }
-        return ans;
+    return d;
+        
     }
 }
